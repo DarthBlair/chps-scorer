@@ -38,7 +38,7 @@ jobs:
         uses: docker/metadata-action@902fa8ec7d6ecbf8d84d538b9b233a880e428804
         with:
           images: |
-            ghcr.io/chps-dev/chps-scorer
+            ghcr.io/DarthBlair/chps-scorer
           labels: |
             org.opencontainers.image.description="CHPs Scorer"
             org.opencontainers.image.source="https://github.com/chps-dev/chps-scorer"

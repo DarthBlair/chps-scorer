@@ -13,7 +13,7 @@ check_cves() {
 
     if command_exists grype; then
         # Count vulnerabilities by severity
-        local grype_output=$(grype "$image" --only-fixed -o table 2>/dev/null)
+        local grype_output=$(grype --only-fixed "$image" -o table 2>/dev/null)
         local critical=$(echo "$grype_output" | grep -c "Critical")
         local high=$(echo "$grype_output" | grep -c "High")
         local medium=$(echo "$grype_output" | grep -c "Medium")
